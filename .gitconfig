@@ -13,6 +13,5 @@
 [merge]
     tool = vimdiff
 [user]
-        name = CornGuo
-        email = cornguo@kkbox.com
-
+    name = CornGuo
+    email = cornguo@msn.com
