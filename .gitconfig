@@ -15,3 +15,5 @@
 [user]
     name = CornGuo
     email = cornguo@msn.com
+[push]
+    default = simple
