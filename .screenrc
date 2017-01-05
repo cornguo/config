@@ -1,5 +1,7 @@
 bindkey ^Aa other
-caption always "%{dk}%{+b K}> %{W}%n %t %{K}<%{W}%=%{+b K}load{%l} %{C}$USER@%{W}%H %{db}%{W}  %0c  "
+#caption always "%{dk}%{+b K}> %{W}%n %t %{K}<%{W}%=%{+b K}load{%l} %{C}$USER@%{W}%H %{db}%{W}  %0c  "
+hardstatus alwayslastline
+hardstatus string "%{dk}%{+b K}> %{W}%n %t %{K}<%{W}%=%{+b K}load{%l} %{C}$USER@%{W}%H %{db}%{W}  %0c  "
 #defbce "on"
 #defc1 "off"
 defscrollback 2000
