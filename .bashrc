@@ -20,8 +20,10 @@ alias psm="ps -U $USER"
 alias psr="psu root"
 alias psu="ps -U"
 alias s="screen"
-alias ssh="ssh -4 -C -e none -v"
+#alias ssh="ssh -4 -C -e none -v"
 alias t="telnet"
+alias ls="ls --color"
+alias ll="ls -lah"
 #
 export BLOCKSIZE="k"
 export EDITOR="vim"
@@ -29,7 +31,7 @@ export GIT_PAGER="less"
 export LESS="-EfmrSwX"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
-export PERL_CPANM_OPT="--mirror http://cpan.nctu.edu.tw/ --mirror http://cpan.cpantesters.org/"
+#export PERL_CPANM_OPT="--mirror http://cpan.nctu.edu.tw/ --mirror http://cpan.cpantesters.org/"
 #
 if [ -z "${LANG}" ]; then
     export LANG="en_US.UTF-8"
@@ -53,9 +55,9 @@ else
 fi
 #
 if [ -z "$WINDOW" ]; then
-    PS1='\[\e[G\e[0m\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\] [\[\e[32m\]\w\[\e[0m\]] [\[\e[36m\]\A\[\e[0m\]] '
+    PS1='\e[G\e[0m\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\]:\[\e[32m\]\w\[\e[0m\] '
 else
-    PS1='\[\e[G\e[0m\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\] [\[\e[32m\]\w\[\e[0m\]] [\[\e[36m\]\A\[\e[0m\]/\[\e[36m\]W$WINDOW\[\e[0m\]] '
+    PS1='\e[G\e[0m\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\]:\[\e[32m\]\w\[\e[0m\] [\[\e[36m\]W$WINDOW\[\e[0m\]] '
 fi
 #
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
