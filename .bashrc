@@ -28,7 +28,7 @@ alias ll="ls -lah"
 export BLOCKSIZE="k"
 export EDITOR="vim"
 export GIT_PAGER="less"
-export LESS="-EfmrSwX"
+export LESS="-EfmrSwXR"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 #export PERL_CPANM_OPT="--mirror http://cpan.nctu.edu.tw/ --mirror http://cpan.cpantesters.org/"
@@ -68,3 +68,7 @@ fi
 [[ -s "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
 #
 [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
+
+if [ -e ~/.login.txt ] && [ $TERM != "su" ]; then
+    cat ~/.login.txt
+fi
