@@ -40,6 +40,7 @@ if [ -x /usr/local/bin/most -o -x /usr/bin/most ]; then
     export PAGER="most"
 else
     export PAGER="less"
+    unalias more
 fi
 #
 shopt -s checkwinsize
